@@ -1,0 +1,231 @@
+*{
+    margin:0px;
+    
+}
+
+.header{
+    height:50px;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    align-items: center;
+}
+.headerLeft{
+    display:flex;
+    flex:1;
+}
+.headerLeft div{
+    margin-left:20px;
+    display: flex;
+}
+.headerLeft div p{
+    margin-left:10px;
+}
+.headerCenter{
+    flex:2;
+}
+.headerCenter *{
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+.headerDiv{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding:5px;
+    background-color: rgb(139, 142, 145);
+}
+.headerRight{
+    display:flex;
+    flex:1;
+}
+.headerRight div{
+    display:flex;
+    width:40px;
+    margin-left:auto;
+    margin-right:10px;
+}
+.hr{
+    border: 1px solid rgb(187, 187, 187);
+}
+.headerRight div p{
+    margin-left:5px;
+}
+select{
+    border-radius: 5px 0 0 5px;
+}
+input{
+    background-color: white;
+    box-sizing: border-box;
+    
+    padding:0px;
+    border:none;
+    outline:none;
+}
+.Center{
+    display:flex;
+}
+
+
+
+
+
+
+input:hover{
+    background-color: rgb(188, 203, 219);
+}
+.submit{
+    border-radius: 0 5px 5px 0;
+}
+.submit:hover{
+    background-color: rgb(190, 189, 189);
+}
+
+
+.p{
+    width:140px;
+    height:50px;
+    margin:10px;
+    box-shadow: 0 0 4px gray;
+    border-radius: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.p::before{
+    content: "+";
+    margin-right:5px;
+    color:red;
+}
+aside{
+    width:200px;
+    height:700px;
+    /* background-color: aquamarine; */
+    font-size: 15px;
+    font-weight: 600;
+}
+.scrollbar{
+    width:200px;
+    max-height:300px;
+    min-height: 100px;
+    height:200px;
+    overflow-y: hidden;
+    resize: vertical;
+}
+.scrollbar:hover{
+    overflow-y: scroll;
+    border-bottom: 2px solid rgb(173, 171, 171);
+}
+.scrollbar div p{
+    box-sizing: border-box;
+    padding:4px;
+}
+.scrollbar div p:before{
+    content: "▶";
+    margin-left:6px;
+    margin-right: 6px;
+}
+.scrollbar div p:hover{
+    background-color: rgb(229, 226, 226);
+    border-radius: 0 15px 15px 0;
+}
+.allMails{
+    color:rgb(241, 2, 54);
+    box-sizing: border-box;
+    padding:4px;
+}
+
+.allMails:before{
+    content: "▶";
+    margin-left:6px;
+    margin-right: 6px;
+}
+.allMails:hover{
+    background-color: rgb(229, 226, 226);
+    border-radius: 0 15px 15px 0;
+}
+
+.area{
+    background-color: rgb(117, 151, 182);
+    width:400px;
+    height:300px;
+    border-radius: 10px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    right:0px;
+    margin:auto;
+    color:white;
+    display:none;
+}
+.headerArea{
+    background-color: rgb(56, 55, 55);
+    height:40px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.right{
+    margin-left:auto;
+    margin-right:10px;
+    height:40px;
+    display: flex;
+    align-items: center;  
+}
+.main input{
+    padding:0px;
+    border:none;
+    border-radius: 2px;
+    margin-left:4px;
+    margin-right:4px;
+    width:100%;
+
+}
+.input_message{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.input_message div{
+    margin-right:10px;
+}
+p{
+    display: flex;
+    text-align: center;
+}
+span{
+    display: inline-block;
+    width:40px;
+    margin-left:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span:hover{
+    background-color: rgb(8, 122, 223);
+    width:40px;
+    height:40px;
+    cursor: pointer;
+}
+
+
+.push div{
+    width: 450px;
+    height:36px;
+    display:flex;
+    box-sizing: border-box;
+    border: 4px solid rgb(226, 223, 223);
+    box-shadow: 0 0 3px black;
+    border-radius: 5px;
+}
+.push div:hover{
+    background-color: aliceblue;
+}
+
+.push div p{
+    background-color: orange;
+}
+.pus div p:hover{
+    background-color: aliceblue;
+}
