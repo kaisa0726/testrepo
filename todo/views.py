@@ -1,5 +1,6 @@
 from .models import Post
 from django.views.generic import ListView
+from django.shortcuts import render
 
 class PostListView(ListView):   
     model = Post
@@ -13,6 +14,8 @@ class PostListView(ListView):
             queryset = queryset.filter(name__contains = qs)
         return queryset
 
+def todo(request):
+    return render(request, "todo/todo.htm")
 
 
 

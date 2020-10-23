@@ -15,7 +15,7 @@
                 <div>
                     <p>●</p>
                     <p>google</p>
-                    <button id="a">▶</button>
+                    <button id="button">▶</button>
                 </div>
             </div>
             <div class="headerCenter">
@@ -27,7 +27,7 @@
                             <option value="">2</option>
                             <option value="">3</option>
                             <option value="">4</option>
-                        </select><input type="text" placeholder="入力してください" onclick="input_text()" id="input_text"><input id="submit" type="submit" class="submit">
+                        </select><input type="text" placeholder="入力してください" id="input_text"><input id="submit" type="submit" class="submit">
                     </div>
                 </form>
             </div>
@@ -46,7 +46,7 @@
     <div class="Center">
         <aside>
             <div class="scrollbar">
-                <div>
+                <div id="scrollbar">
                     <p class="allMails">全ての受信メール</p>
                     <p class= "addElement" id="addElement">追加</p>
                 </div>
@@ -54,6 +54,9 @@
             <div>
                 <h1>sss</h1>
                 <h2>ss</h2>
+                <h3>ss</h3>
+                <ul><li><a href="{% url 'todo:index' %}">push</a>
+                </li></ul>
             </div>
         
         </aside>

@@ -1,11 +1,12 @@
 const area = document.getElementById("area");
 const headerDiv = document.getElementById("headerDiv");
 const input_text = document.getElementById("input_text");
-const submit = document.getElementById("a");
+const button = document.getElementById("button");
 const destination = document.getElementById("destination");
 const address = document.getElementById("address");
 const createMail = document.getElementById("createMail");
 const push = document.getElementById("push");
+const scrollbar = document.getElementById("scrollbar");
 
 function a() {
     area.style.display = "block";
@@ -38,7 +39,12 @@ headerDiv.addEventListener("mouseout",function(){
     headerDiv.style.backgroundColor = "rgb(139, 142, 145)"
 })
 
-submit.addEventListener('click',function(){
-    const input = input_text.value;
-
+button.addEventListener('click',function(){
+    const input = input_text.value ;
+    const element = document.createElement("p");
+    element.innerHTML = input;
+    scrollbar.appendChild(element);
+    element.setAttribute('id', 'add')
 })
+
+const 
