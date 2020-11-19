@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{% if query %}{{ query}}{% endif %}{{ block.super }}{% endblock  %}
+{% block description %}検索ワード「{% if query %}{{ query }}{% endif %}での検索ページです.{% endblock  %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+    <main>
+      <h3>「{% if query %}{{ query }}{% endif %}」の検索結果</h3>
+      <p class="card-text">{{ page_obj.start_index }}={{ page_obj.end_index }}件　({{ paginator.count }}件)</p>
+
+      {% include 'blogs/snippets/query_post_list.html' %}
+      {% include 'blogs/snippets/pagination.html' %}
+    </main>
+    <aside>
+        {% include 'blogs/snippets/sidebar.html' %}
+    </aside>
+    </div>
+  </div>
+{% endblock  %}
+    
+    
+    

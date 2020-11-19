@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}投稿一覧 | {{ block.super }}{% endblock  %}
+
+{% block description %}{% endblock  %}
+{% block content %}
+<div class="arti">
+    <main>
+        <h1>投稿一覧</h1>
+        {% include 'blogs/snippets/main_post_list.html' %}  
+        
+    </main>
+    <aside>
+        {% include 'blogs/snippets/sidebar.html' %}
+    </aside>
+</div>
+<div class="under_bar">
+    {% include 'blogs/snippets/pagination.html' %}
+</div>
+{% include 'blogs/snippets/comments.html' %}
+{% endblock  %}
+
+
+
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">

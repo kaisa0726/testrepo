@@ -1,0 +1,28 @@
+<div class='category'>
+    <h3>カテゴリー一覧</h3>
+    <hr>
+    {% for category in categories|dictsort:'id' %}
+    <div class="category_content">
+        <h5 class="card-title">{{ category.name }}</h5>
+        <p class="card-text">{{ category.num_posts }}</p>
+    </div>
+    {% endfor %}
+
+</div>
+
+<div class="tag">
+    <h3>タグ一覧</h3>
+    <hr>
+    {% for tag in tags|dictsortreversed:"num_posts"|slice:":5" %}
+
+    <div class="tag_content">
+        <h5 class="card-title">{{ tag.name }}</h5>
+        <p class="card-text">{{ tag.num_posts }}</p>
+    </div>
+    {% endfor %}
+    <hr>
+    <div>
+        <a href="{% url 'blogs:tag_list' %}">全てのタグを見る</a>
+    </div>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="Post">
+    {% for query in query %}
+    <div class="card-header"></div>
+        
+        <div class="article_button">
+            {{ query.title }}
+            {{ query.text }}
+                <button class="btn btn-primary" type="submit">記事を読む</button>
+            
+        </div>
+    </div>
+    {% endfor %}
+</div>

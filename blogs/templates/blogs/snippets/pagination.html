@@ -1,0 +1,32 @@
+{% if is_paginated %}
+<nav>
+    <ul>
+        {% if page_obj.has_previous %}
+        <li>
+            <a href="?page={{ page_obj.previous_page_number  }}">
+
+                {% if query %}&q={{ query}}前へ</a>{% endif %}
+
+        </li>
+        {% endif %}
+
+
+        {% for num in paginator.page_range %}
+
+        {% if page_obj.number == num %}
+        <span>{{ num }}</span>
+        {% else %}
+        <a href="?page{{ num }}">
+            {% if query %}&q={{ query }}{% endif %}{{ num }}</a>
+        {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">{% if query %}&q={{ query }}{% endif %}次へ</a>
+    
+        {% endif %}
+    </ul>
+</nav>
+
+{% endif %}
+

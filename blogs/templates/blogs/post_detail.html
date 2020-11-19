@@ -1,0 +1,27 @@
+<h1>{{ object.title }}</h1>
+<p>{{ object.published_at|date }}</p>
+<p>{{ object.category.name }}</p>
+
+{% for tag in object.tags.all %}{{ tag.name }}{% endfor %}
+
+{% if post.image %}
+<img src="{{ post.image.url }}" alt="" width="200" height="125">
+{% endif %}
+  
+
+
+<hr>
+{{ object.text |safe }}
+
+<img src="/media//post_content_images/aaaaa.png" alt="" width="300" height="200">
+
+<main class="col-md-8">
+    <article class="blog-area">
+    </article>
+    <article class="comment-area">
+      <a class="btn btn-primary my-3" href="{% url 'blogs:comment_form' post.pk %}">コメントを投稿する</a>
+      {% include "blogs/snippets/comments.html" %}
+    </article>
+  </main>
+<button><a href="{% url 'blogs:index' %}">トップへ</a></button>
+
