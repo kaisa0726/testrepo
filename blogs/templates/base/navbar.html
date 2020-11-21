@@ -21,7 +21,7 @@
 
                 {% for tag in tags %}
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a href="{% url 'blogs:post_detail' tag.id %}">{{ tag }}</a>
+                    
                 </div>
                 {% endfor %}
 
@@ -30,6 +30,6 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">投稿</a>
             </li>
         </ul>
-        {% include 'blogs/snippets/searchfor.html' %}
+        
     </div>
 </nav>

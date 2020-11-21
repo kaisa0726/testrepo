@@ -1,22 +1,33 @@
 h1{
     color:red;
 }
+body{
+    padding: 30px;
+    background-color: aliceblue;
+}
 
+.index_area{
+    margin-top:50px;
+}
 /* 投稿の見出し */
 main{
-    width:400px;
+    border: solid 1px gray;
+    border-radius: 20px;
+    margin-left:70px;
+    width:500px;
+    height:300px;
    background-color: rgb(241, 239, 239); 
 }
 
 aside{
-    margin-left:50px;
+    margin-left:100px;
     border-radius: 10px;
     
 }
 .category{
     
     border-radius: 10px;
-    width: 600px;
+    width:500px;
     border: solid 1px gray;
 }
 .tag{
@@ -50,8 +61,18 @@ aside{
     margin-right:1px;
 }
 .under_bar{
-    width:400px;
-    margin-left:auto;
-    margin-right: auto;
-    background-color: aliceblue;
+    position: fixed;
+    bottom: 0px;
+    left:40vw;
+}
+li{
+    list-style-type: none;
+}
+.card_header li::before{
+    content:'☆';
+    color:blue;
+}
+
+.div_post{
+    display: flex;
 }

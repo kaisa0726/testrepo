@@ -1,10 +1,12 @@
 <h1>タグ一覧</h1>
 <ul>
-    
     {% for tag in object_list %}
-    <li><a href="{% url 'blogs:tag_post' tag.slug %}">{{ tag.name }} ({{ tag.num_posts }})</a></li>
+    <li>
+        <a href="{% url 'blogs:tag_post' tag_slug %}">{{ tag.name }} ({{ tag.num_posts }})</a>
+    </li>
     {% empty %}
-    <li>タグはありません。</li>
+    <li>
+        タグはありません。
+    </li>
     {% endfor %}
-        
 </ul>

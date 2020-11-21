@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}投稿一覧 | {{ block.super }}{% endblock  %}
-
 {% block description %}{% endblock  %}
 {% block content %}
-<div class="arti">
+<div class="index_area">
     <main>
         <h1>投稿一覧</h1>
-        {% include 'blogs/snippets/main_post_list.html' %}  
-        
+        <ul>
+            {% for post in index %}
+            {% if user.is_authenticated or post.is_public %}
+            <li>{% if not post.is_public %}[下書き]{% endif %}<a href="{% url 'todo:post_detail' post.id %}">{{ post.title }}</a></li>
+            {% endif %}
+            {% empty %}
+            <li>まだ投稿はありません</li>
+            {% endfor %}
+        </ul>
     </main>
     <aside>
-        {% include 'blogs/snippets/sidebar.html' %}
+        {% include 'blogs/tag_list.html' %}
+        {% include 'blogs/category_list.html' %}
     </aside>
 </div>
 <div class="under_bar">
     {% include 'blogs/snippets/pagination.html' %}
 </div>
-{% include 'blogs/snippets/comments.html' %}
 {% endblock  %}
-
-
-
-
 <link rel="stylesheet" href="{% static 'css/home.css' %}">

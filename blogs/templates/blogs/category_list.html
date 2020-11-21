@@ -1,10 +1,10 @@
 <h1>カテゴリー一覧</h1>
+
 <ul>
-    
     {% for category in object_list %}
-        <li><a href="{% url 'blogs:category_post' category.slug %}">{{ category.name }} ({{ category.num_posts }})</a></li>
+    <li><a href="{% url 'blogs:category_post' category_slug %}">{{ category.name }}({{category.num_posts }})</a></li>
     {% empty %}
-    <li>カテゴリーはありません。</li>
+    <li>カテゴリーはありません</li>
     {% endfor %}
-        
+
 </ul>
